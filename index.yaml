@@ -1,0 +1,25 @@
+info:
+  nom: STD23071 - TD1
+  version: 1.0.0
+server:
+  url: https://localhost.STD23071.com
+paths:
+  /customers:
+    get:
+      responses:
+        200:
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Customer"
+components:
+  schemas:
+    Customer:
+      type: object
+      properties:
+        name:
+          type: string
+        age:
+          type: integer
